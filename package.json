@@ -1,6 +1,6 @@
 {
   "name": "dictionary-server",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A dictionary server supporting MCP and SSE",
   "private": true,
   "type": "module",
@@ -15,23 +15,20 @@
     "prepare": "npm run build",
     "watch": "tsc --watch",
     "start": "node build/index.js",
-    "start:port": "PORT=3030 node build/index.js",
-    "start:debug": "NODE_DEBUG=http,net node build/index.js",
-    "start:mcp": "node build/index.js --mcp",
     "inspector": "PORT=3001 npx @modelcontextprotocol/inspector build/index.js --mcp",
-    "inspector:alt": "PORT=3030 npx @modelcontextprotocol/inspector build/index.js --mcp",
     "test-api": "curl -v http://localhost:3000/api/lookup/hello"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "0.6.0",
+    "@modelcontextprotocol/sdk": "^1.8.0",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
     "axios": "^1.8.4",
     "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@types/node": "^20.11.24",
-    "typescript": "^5.3.3"
+    "@types/node": "^20.17.30",
+    "typescript": "^5.8.2"
   }
 }
