@@ -1,5 +1,5 @@
 {
-  "name": "dictionary-server",
+  "name": "mcp-server-dictionary",
   "version": "0.0.1",
   "description": "A dictionary server supporting MCP",
   "keywords": [
