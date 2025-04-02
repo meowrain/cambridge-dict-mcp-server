@@ -1,5 +1,7 @@
 # Dictionary Server
 
+[![smithery badge](https://smithery.ai/badge/@meowrain/mcp-server-cambridge-dict)](https://smithery.ai/server/@meowrain/mcp-server-cambridge-dict)
+
 A dictionary server supporting the Model Context Protocol (MCP).
 
 Retrieves word meanings from the Cambridge Dictionary.
