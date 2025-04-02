@@ -1,92 +1,114 @@
 # Dictionary Server
 
-这是一个支持 Model Context Protocol (MCP) 的词典服务器。
+A dictionary server supporting the Model Context Protocol (MCP).
 
-## 功能
+Retrieves word meanings from the Cambridge Dictionary.
 
-- 通过 MCP 协议与 Claude 和其他 AI 助手集成
-- 提供词典查询工具
+## Adding MCP to Command Line
 
-## 开发
+To integrate the MCP server into your command line, add the following configuration:
 
-安装依赖:
+```json
+"mcp-server-cambridge-dict": {
+  "command": "npx",
+  "args": ["-y", "mcp-server-dictionary"],
+  "disabled": false
+}
+```
+
+## Features
+
+- Seamless integration with Claude and other AI assistants via the MCP protocol.
+- Robust dictionary query tools.
+- Retrieves word meanings from the Cambridge Dictionary.
+
+## Development
+
+### Install Dependencies
+
+Install the required dependencies:
 
 ```bash
 npm install
 ```
 
-构建服务器:
+### Build the Server
+
+Build the server for production:
 
 ```bash
 npm run build
 ```
 
-开发模式（自动重建）:
+### Development Mode
+
+Enable auto-rebuild during development:
 
 ```bash
 npm run watch
 ```
 
-## 运行
+## Running the Server
 
-启动 MCP 服务器:
+Start the MCP server with the following command:
 
 ```bash
 npm run start:mcp
 ```
 
-## 使用 MCP Inspector 测试
+## Testing with MCP Inspector
 
-启动 Inspector:
+To test the server, use the MCP Inspector:
 
 ```bash
 npm run inspector
 ```
 
-## MCP 响应规范
+## MCP Response Specification
 
-此服务器遵循 MCP 响应规范:
+This server adheres to the MCP response specification.
 
-### 工具响应
+### Tool Response
 
-查询单词时，将返回以下格式:
+A successful word query returns the following format:
 
 ```json
 {
   "content": [
     {
       "type": "text",
-      "text": "单词查询结果（JSON格式）"
+      "text": "Word query result (in JSON format)"
     }
   ]
 }
 ```
 
-### 错误响应
+### Error Response
 
-当出现错误时，将返回以下格式:
+In case of an error, the response format is:
 
 ```json
 {
   "content": [
     {
       "type": "text",
-      "text": "错误信息"
+      "text": "Error message"
     }
   ],
   "isError": true
 }
 ```
 
-## API 说明
+## API Documentation
 
-### lookup_word
+### `lookup_word`
 
-查询单词的读音、定义和例句。
+Fetches the pronunciation, definition, and example sentences for a word.
 
-**参数:**
+#### Parameters
 
-- `word`: 要查询的单词 (字符串)
+- `word` (string): The word to query.
 
-**返回:**
-单词的详细信息，包括读音、定义和例句。
+#### Returns
+
+Detailed information about the word, including pronunciation, definition, and example sentences.
