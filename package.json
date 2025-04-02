@@ -2,6 +2,17 @@
   "name": "dictionary-server",
   "version": "0.0.1",
   "description": "A dictionary server supporting MCP",
+  "keywords": [
+    "dictionary",
+    "server",
+    "MCP"
+  ],
+  "author": "meowrain@126.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meowrain/mcp-server-cambridge-dict"
+  },
+  "license": "MIT",
   "type": "module",
   "bin": {
     "dictionary-server": "./build/index.js"
