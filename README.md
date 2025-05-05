@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/meowrain-mcp-server-cambridge-dict-badge.png)](https://mseep.ai/app/meowrain-mcp-server-cambridge-dict)
+
 # Dictionary Server
 
 [![smithery badge](https://smithery.ai/badge/@meowrain/mcp-server-cambridge-dict)](https://smithery.ai/server/@meowrain/mcp-server-cambridge-dict)
